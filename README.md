@@ -7,3 +7,5 @@ pensado en el sorteo navideño anual conocido como 'El Gordo de Navidad'.. Es mi
 lo cual me resulta muy emocionante desde lo personal..  
 
 ###---------------------------------------------------------------------------------------------------------------
+
+ADDRESS_CONTRACT --network ropsten: 0xae9554B37D919Df61397F771e43F9098cEC824eE;

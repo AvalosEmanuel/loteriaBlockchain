@@ -14,18 +14,23 @@ const BtnTokensDisponibles = (props) => {
 
   //Lógica para visulizar tokens disponibles para la compra..
   async function tokensDisponibles() {
-    if(typeof window.ethereum !== 'undefined') {
+    if(window.ethereum !== 'undefined') {
+      await window.ethereum.request({ method: 'eth_requestAccounts' });
       const provider = new ethers.providers.Web3Provider(window.ethereum);
       const contract = new ethers.Contract(CONTRACT_ADDRESS, props.contract.abi, provider);
       try {
+        //console.log("Account: ", account);
         const cantidadTokens = await contract.tokensDisponibles();
         setTokens(cantidadTokens.toString());
         setVistaTokens(true);
       } catch (error) {
+        
         console.log("Error al implementar contrato en tokens disponibles..")
         console.log("Error: ", error);
         
       }
+    } else {
+      alert("Necesitas un proovedor web3.. Recomendamos Metamask..");
     }
   }
 

@@ -16,7 +16,6 @@ import BtnGeneraTokens from './components/btnGenerarTokens';
 import BtnGeneraGanador from './components/btnGenerarGanador';
 
 
-
 function App() {
   const Artifact = artifacts;
 

@@ -3,11 +3,11 @@
 require("dotenv").config();
 require("@nomiclabs/hardhat-waffle");
 
-/** 
+
   // Configuración para desplegar contrato en red de prueba ropten..
   // Utilizando un nodo Alchemy..
   module.exports = {
-    solidity: "0.8.4",
+    solidity: "0.8.0",
     //defaultNetwork: "hardhat",
     paths: {
       artifacts: './src/artifacts',
@@ -22,20 +22,23 @@ require("@nomiclabs/hardhat-waffle");
       }
     },
   };
-*/
+
+
 
 // Configuración para desplegar contrato en LocalHost..
 
-module.exports = {
-  solidity: "0.8.4",
-  paths: {
-    artifacts: './src/artifacts',
-  },
-  networks: {
-    hardhat: {
-      chainId: 1337
+/** 
+  module.exports = {
+    solidity: "0.8.4",
+    paths: {
+      artifacts: './src/artifacts',
+      },
+    networks: {
+      hardhat: {
+        chainId: 1337
+      }
     }
-  }
-};
+  };
+*/
 
 // --------------------------------------------------------

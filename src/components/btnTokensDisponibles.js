@@ -22,8 +22,9 @@ const BtnTokensDisponibles = (props) => {
         setTokens(cantidadTokens.toString());
         setVistaTokens(true);
       } catch (error) {
-        console.log("Error: ", error);
         console.log("Error al implementar contrato en tokens disponibles..")
+        console.log("Error: ", error);
+        
       }
     }
   }

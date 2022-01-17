@@ -7,6 +7,8 @@ import Card from 'react-bootstrap/Card';
 //Address del contrato implementado en blockchain..
 const CONTRACT_ADDRESS = '0xae9554B37D919Df61397F771e43F9098cEC824eE';
 
+
+
 const BtnComprarTokens = (props) => {
     const [cantTokens, setCantidadTokens] = useState();
 
@@ -20,6 +22,11 @@ const BtnComprarTokens = (props) => {
                 const transaction = await contract.comprarTokens(cantTokens, {value: ethers.utils.parseEther(cantTokens)});
                 await transaction.wait();
                 alert("Tokens comprados..")
+
+                //--------------------------------------------------------
+                contract.on("Transfer", (from, to, amount, event) => {
+                    console.log(from, to, amount, event) });
+                //--------------------------------------------------------
             } catch (error) {
                 console.log("Error: ", error);
             }

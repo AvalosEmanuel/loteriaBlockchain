@@ -15,39 +15,42 @@ import BtnDevolverTokens from './components/btnCanjearTokens';
 import BtnGeneraTokens from './components/btnGenerarTokens';
 import BtnGeneraGanador from './components/btnGenerarGanador';
 
+import BtnConectar from './components/btnConectar';
+
 
 function App() {
-  const Artifact = artifacts;
 
-  return (
+  return (  
         <div className='App'>
           <div>
-            <BtnGeneraTokens contract={Artifact} />
-            <BtnGeneraGanador contract={Artifact} />
+            <BtnGeneraTokens contract={artifacts} /> 
+            <BtnGeneraGanador contract={artifacts} />
+          </div>
+          <div>
+            <BtnConectar />
           </div>
           <div className="App2">
             <Container>
               <Row>
-                <Col><BtnPozoAcumulado contract={Artifact} /></Col>
+                <Col><BtnPozoAcumulado contract={artifacts} /></Col>
               </Row><br />
               <Row>
-                <Col><BtnTokensDisponibles contract={Artifact} /></Col>
+                <Col><BtnTokensDisponibles contract={artifacts} /></Col>
               </Row><br />
               <Row>
-                <Col><BtnComprarTokens contract={Artifact} /></Col>
-                <Col><BtnComprarTickets contract={Artifact} /></Col>
+                <Col><BtnComprarTokens contract={artifacts} /></Col>
+                <Col><BtnComprarTickets contract={artifacts} /></Col>
               </Row><br />
               <Row>
-                <Col><BtnMisTokens contract={Artifact} /></Col>
-                <Col><BtnMisTickets contract={Artifact} /></Col>
+                <Col><BtnMisTokens contract={artifacts} /></Col>
+                <Col><BtnMisTickets contract={artifacts} /></Col>
               </Row><br />
               <Row>
-                <Col><BtnDevolverTokens contract={Artifact} /></Col>
+                <Col><BtnDevolverTokens contract={artifacts} /></Col>
               </Row>         
             </Container>     
-    </div>  
-      </div>
-      
+          </div>  
+        </div>  
   );
 }
 

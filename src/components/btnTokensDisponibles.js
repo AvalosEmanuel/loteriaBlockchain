@@ -15,7 +15,6 @@ const BtnTokensDisponibles = (props) => {
   //Lógica para visulizar tokens disponibles para la compra..
   async function tokensDisponibles() {
     if(window.ethereum !== 'undefined') {
-      await window.ethereum.request({ method: 'eth_requestAccounts' });
       const provider = new ethers.providers.Web3Provider(window.ethereum);
       const contract = new ethers.Contract(CONTRACT_ADDRESS, props.contract.abi, provider);
       try {

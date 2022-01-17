@@ -1,0 +1,55 @@
+.App {
+  background-image: url("./image/blockchain.jpg");
+  height: 100vh;
+  text-align: center;
+  display: flex;
+}
+
+.App2 {
+  align-items: center;
+  height: 100vh;
+  text-align: center;
+  display: flex;
+}
+
+.inputCompraTokens {
+  border-color:aqua;
+  border-radius: 5px;
+  background-color:antiquewhite;
+  margin-top: 5px;
+  width: 300px;
+  text-align: center;
+}
+
+.inputCompraTickets {
+  border-color:gold;
+  border-radius: 5px;
+  background-color:antiquewhite;
+  margin-top: 5px;
+  width: 300px;
+  text-align: center;
+}
+
+.inputDevolverTokens {
+  border-color:slateblue;
+  border-radius: 5px;
+  background-color:antiquewhite;
+  margin-top: 5px;
+  width: 300px;
+  text-align: center;
+}
+
+.alertMensaje {
+  margin-top: 5px;
+}
+
+.alertTickets {
+  margin-top: 5px;
+}
+
+.btnGeneraTokens  {
+  margin: 10px;
+  border: 3px;
+}
+
+

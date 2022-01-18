@@ -8,7 +8,7 @@ const BtnConectar = () => {
                 await window.ethereum.request({ method: 'eth_requestAccounts' });
     
             } catch (error) {
-            alert('Solicitud: Conectar wallet fallida..');
+            alert("Necesitas un proovedor web3.. Recomendamos Metamask..");
             console.log("Error: ", error); 
             }
         } else {

@@ -18,7 +18,6 @@ const BtnTokensDisponibles = (props) => {
       const provider = new ethers.providers.Web3Provider(window.ethereum);
       const contract = new ethers.Contract(CONTRACT_ADDRESS, props.contract.abi, provider);
       try {
-        //console.log("Account: ", account);
         const cantidadTokens = await contract.tokensDisponibles();
         setTokens(cantidadTokens.toString());
         setVistaTokens(true);

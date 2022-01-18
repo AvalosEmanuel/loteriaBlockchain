@@ -8,13 +8,12 @@ import Message from './Mensaje'
 const CONTRACT_ADDRESS = '0xae9554B37D919Df61397F771e43F9098cEC824eE';
 
 const BtnTokensDisponibles = (props) => {
-
   const [tokens, setTokens] = useState();
   const [vistaTokens, setVistaTokens] = useState(false);
 
   //Lógica para visulizar tokens disponibles para la compra..
   async function tokensDisponibles() {
-    if(window.ethereum !== 'undefined') {
+    if(typeof window.ethereum !== 'undefined') {
       const provider = new ethers.providers.Web3Provider(window.ethereum);
       const contract = new ethers.Contract(CONTRACT_ADDRESS, props.contract.abi, provider);
       try {

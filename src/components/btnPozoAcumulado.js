@@ -22,7 +22,10 @@ const BtnPozoAcumulado = (props) => {
                 setVistaTokens(true);
             } catch (error) {
                 console.log("Error: ", error);
+                alert("Solicitud: Ver pozo acumulado fallida..");
             }
+        } else {
+            alert("No existe proveedor de web3.. recomendamos Metamask..");
         }
     }
 

@@ -21,15 +21,14 @@ const BtnComprarTokens = (props) => {
             try {
                 const transaction = await contract.comprarTokens(cantTokens, {value: ethers.utils.parseEther(cantTokens)});
                 await transaction.wait();
-                alert("Tokens comprados..")
+                alert("Tokens comprados..");
 
-                //--------------------------------------------------------
-                contract.on("Transfer", (from, to, amount, event) => {
-                    console.log(from, to, amount, event) });
-                //--------------------------------------------------------
             } catch (error) {
                 console.log("Error: ", error);
+                alert("Compra de tokens fallida..");
             }
+        } else {
+            alert("No existe proveedor de web3.. recomendamos Metamask..");
         }
     }
 

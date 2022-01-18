@@ -23,13 +23,11 @@ const BtnTokensDisponibles = (props) => {
         setTokens(cantidadTokens.toString());
         setVistaTokens(true);
       } catch (error) {
-        
-        console.log("Error al implementar contrato en tokens disponibles..")
         console.log("Error: ", error);
-        
+        alert("Solicitud: Ver tokens disponibles fallida..");
       }
     } else {
-      alert("Necesitas un proovedor web3.. Recomendamos Metamask..");
+      alert("No existe proveedor de web3.. recomendamos Metamask..");
     }
   }
 

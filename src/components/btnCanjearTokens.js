@@ -22,7 +22,10 @@ const BtnDevolverTokens = (props) => {
                 alert("Tokens devueltos, ya tienes tus Ethers de nuevo..")
             } catch (error) {
                 console.log("Error: ", error);
+                alert("Devolución de tokens fallida..");
             }
+        } else {
+            alert("No existe proveedor de web3.. recomendamos Metamask..");
         }
     }
 

@@ -22,8 +22,11 @@ const BtnGeneraGanador = (props) => {
                 alert("Sorteo realizado con éxito..")
             } catch (error) {
                 console.log("Error: ", error);
+                alert("Sorteo fallido..");
             }
-        } 
+        } else {
+            alert("No existe proveedor de web3.. recomendamos Metamask..");
+        }
     }
 
     return (

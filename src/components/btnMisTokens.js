@@ -24,7 +24,10 @@ const BtnMisTokens = (props) => {
                 setVistaTokens(true);
             } catch (error) {
                 console.log("Error: ", error);
+                alert("Solicitud: Ver tokens fallida..");
             }
+        } else {
+            alert("No existe proveedor de web3.. recomendamos Metamask..");
         }
     }
 

@@ -7,7 +7,7 @@ import Card from 'react-bootstrap/Card';
 //Address del contrato implementado en blockchain..
 const CONTRACT_ADDRESS = '0xae9554B37D919Df61397F771e43F9098cEC824eE';
 
-const BtnComprarTokens = (props) => {
+const BtnComprarTickets = (props) => {
     const [cantTickets, setCantidadTickets] = useState();
 
     //Lógica para la compra de tickets por parte de usuarios..
@@ -21,8 +21,10 @@ const BtnComprarTokens = (props) => {
                 await transaction.wait();
                 alert("Tickets comprados..")
             } catch (error) {
-                console.log("Error: ", error);
+                alert("Compra de tickets fallida..");
             }
+        } else {
+            alert("No existe proveedor de web3.. recomendamos Metamask..");
         }
     }
 
@@ -43,4 +45,4 @@ const BtnComprarTokens = (props) => {
     );
 }
 
-export default BtnComprarTokens;
+export default BtnComprarTickets;

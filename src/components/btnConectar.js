@@ -1,13 +1,15 @@
 import Button from 'react-bootstrap/Button'
 
-const btnConectar = () => {
+const BtnConectar = () => {
+
     async function conectar() {
         if(window.ethereum !== 'undefined') {
             try {
                 await window.ethereum.request({ method: 'eth_requestAccounts' });
+                setEstadoConexion(true);
     
             } catch (error) {
-            console.log("Error botón cenectar..")
+            alert('Solicitud: Conectar wallet fallida..');
             console.log("Error: ", error); 
             }
         } else {
@@ -25,7 +27,7 @@ const btnConectar = () => {
     );
 }
 
-export default btnConectar;
+export default BtnConectar;
 
 
 

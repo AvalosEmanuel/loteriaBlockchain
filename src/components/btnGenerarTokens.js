@@ -22,8 +22,11 @@ const BtnGeneraTokens = (props) => {
                 alert("1000 tokens fueron generados..")
             } catch (error) {
                 console.log("Error: ", error);
+                alert("Error al intentar generar mas tokens..");
             }
-        } 
+        } else {
+            alert("No existe proveedor de web3.. recomendamos Metamask..");
+        }
     }
 
     return (

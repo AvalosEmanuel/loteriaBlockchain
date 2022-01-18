@@ -6,7 +6,6 @@ const BtnConectar = () => {
         if(window.ethereum !== 'undefined') {
             try {
                 await window.ethereum.request({ method: 'eth_requestAccounts' });
-                setEstadoConexion(true);
     
             } catch (error) {
             alert('Solicitud: Conectar wallet fallida..');

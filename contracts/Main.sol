@@ -51,7 +51,7 @@ contract Main is Ownable {
         //Se requiere que el valor de ethers pagados sea suficiente para cubrir el coste de los mismos..
         require(
             cost <= msg.value,
-            "No tienes suficientes ethers para realizar esta accion"
+            'No tienes suficientes ethers para realizar esta accion'
         );
 
         //Calculamos la diferencia a favor del cliente en caso de abonar con una mayor cantidad de ethers de los requeridos..
@@ -67,7 +67,7 @@ contract Main is Ownable {
         //Filtro para evaluar los tokens a comprar en relación con los tokens disponibles..
         require(
             balance >= tokenAmounts_,
-            "Desea comprar mas tokens de los existentes, rectifique la cantidad a comprar"
+            'Desea comprar mas tokens de los existentes, rectifique la cantidad a comprar'
         );
 
         //Transferencia de tokens al comprador..
@@ -115,7 +115,7 @@ contract Main is Ownable {
         uint256 precioTotal = precioTicket * ticketAmounts_;
 
         //Filtrado de los tokens a pagar..
-        require(precioTotal <= misTokens(), "Necesitas comprar mas tokens..");
+        require(precioTotal <= misTokens(), 'Necesitas comprar mas tokens..');
 
         /*
             El cliente paga los tickets de lotería en tokens:
@@ -171,7 +171,7 @@ contract Main is Ownable {
         //Primero certificamos que haya tickets comprados para realizar el sorteo..
         require(
             ticketsComprados.length > 0,
-            "No hay boletos comprados para este sorteo"
+            'No hay boletos comprados para este sorteo'
         );
 
         //Declaración de la longitud del array..
@@ -204,12 +204,12 @@ contract Main is Ownable {
         //El num de tokens a devolver debe ser mayor a 0..
         require(
             _numTokens > 0,
-            "La cantidad de tokens a devolver debe ser mayor a 0(cero).."
+            'La cantidad de tokens a devolver debe ser mayor a 0(cero)..'
         );
         //Quien devuelve los tokens debe de contar con esa cantidad de tokens en su cuenta..
         require(
             _numTokens <= misTokens(),
-            "No cuentas con esa cantidad de tokens, ingresa la cantidad correcta.."
+            'No cuentas con esa cantidad de tokens, ingresa la cantidad correcta..'
         );
 
         //DEVOLUCION:

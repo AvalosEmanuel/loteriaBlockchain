@@ -10,7 +10,7 @@ const CONTRACT_ADDRESS = '0xae9554B37D919Df61397F771e43F9098cEC824eE';
 const MessageTickets = ({ tickets }) => {
     return (
       <div>
-      <Alert className="alertTickets" variant="info"> Tickets : {tickets}</Alert>
+      <Alert className='alertTickets' variant='info'> Tickets : {tickets}</Alert>
       </div>
   )
 }
@@ -30,20 +30,20 @@ const BtnMisTickets = (props) => {
                 setTicketsUser(cantidadTokens.toString());
                 setVistaTickets(true);
             } catch (error) {
-                console.log("Error: ", error);
-                alert("Solicitud: Ver tickets fallida..");
+                console.log('Error: ', error);
+                alert('Solicitud: Ver tickets fallida..');
             }
         } else {
-            alert("No existe proveedor de web3.. recomendamos Metamask..");
+            alert('No existe proveedor de web3.. recomendamos Metamask..');
         }
     }
 
     return(
         <div>
-            <Card style={{ background: "rgba(238, 243, 93, 0.8)"}}>
+            <Card style={{ background: 'rgba(238, 243, 93, 0.8)'}}>
                 <Card.Body>
-                    <div className="d.grid gap-2">
-                        <Button onClick={ticketsUsuario} variant="warning" size="lg"> VER MIS TICKETS </Button>
+                    <div className='d.grid gap-2'>
+                        <Button onClick={ticketsUsuario} variant='warning' size='lg'> VER MIS TICKETS </Button>
                         {vistaTickets ? <MessageTickets tickets={ticketsUser}/> : null}
                     </div>
                 </Card.Body>

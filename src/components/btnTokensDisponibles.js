@@ -21,20 +21,20 @@ const BtnTokensDisponibles = (props) => {
         setTokens(cantidadTokens.toString());
         setVistaTokens(true);
       } catch (error) {
-        console.log("Error: ", error);
-        alert("Solicitud: Ver tokens disponibles fallida..");
+        console.log('Error: ', error);
+        alert('Solicitud: Ver tokens disponibles fallida..');
       }
     } else {
-      alert("No existe proveedor de web3.. recomendamos Metamask..");
+      alert('No existe proveedor de web3.. recomendamos Metamask..');
     }
   }
 
   return(
     <div>
-      <Card style={{background: "rgba(160, 242, 186, 0.8)"}}> 
+      <Card style={{background: 'rgba(160, 242, 186, 0.8)'}}> 
         <Card.Body>
-          <div className="d-grid gap-2">
-            <Button onClick={tokensDisponibles} variant="success" size="lg">TOKENS DISPONIBLES</Button>
+          <div className='d-grid gap-2'>
+            <Button onClick={tokensDisponibles} variant='success' size='lg'>TOKENS DISPONIBLES</Button>
             {vistaTokens ? <Message tokens={tokens}/> : null}
           </div>
         </Card.Body>

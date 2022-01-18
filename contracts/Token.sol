@@ -65,11 +65,11 @@ contract Token is IERC20, IERC20Metadata {
     {
         require(
             recipient_ != address(0),
-            "NO se puede realizar una transferencia a la direccion 0(cero).."
+            'NO se puede realizar una transferencia a la direccion 0(cero)..'
         );
         require(
             amount_ <= _balances[msg.sender],
-            "La cantidad que deseas enviar en superior al saldo disponible.."
+            'La cantidad que deseas enviar en superior al saldo disponible..'
         );
         _balances[msg.sender] = _balances[msg.sender].sub(amount_);
         _balances[recipient_] = _balances[recipient_].add(amount_);
@@ -111,11 +111,11 @@ contract Token is IERC20, IERC20Metadata {
     ) public returns (bool) {
         require(
             recipient_ != address(0),
-            "NO se puede realizar una transferencia a la direccion 0(cero).."
+            'NO se puede realizar una transferencia a la direccion 0(cero)..'
         );
         require(
             amount_ <= _balances[from_],
-            "La cantidad que deseas enviar en superior al saldo disponible.."
+            'La cantidad que deseas enviar en superior al saldo disponible..'
         );
         _balances[from_] = _balances[from_].sub(amount_);
         _balances[recipient_] = _balances[recipient_].add(amount_);
@@ -130,7 +130,7 @@ contract Token is IERC20, IERC20Metadata {
     function _mint(address account_, uint256 amount_) internal {
         require(
             account_ != address(0),
-            "ERC20: Minteo a direccion 0(cero) NO permitido.."
+            'ERC20: Minteo a direccion 0(cero) NO permitido..'
         );
         _totalSupply += amount_;
         _balances[account_] += amount_;

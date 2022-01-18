@@ -29,7 +29,7 @@ function App() {
           <div>
             <BtnConectar />
           </div>
-          <div className="App2">
+          <div className='App2'>
             <Container>
               <Row>
                 <Col><BtnPozoAcumulado contract={artifacts} /></Col>

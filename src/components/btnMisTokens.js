@@ -23,20 +23,20 @@ const BtnMisTokens = (props) => {
                 setTokensUser(cantidadTokens.toString());
                 setVistaTokens(true);
             } catch (error) {
-                console.log("Error: ", error);
-                alert("Solicitud: Ver tokens fallida..");
+                console.log('Error: ', error);
+                alert('Solicitud: Ver tokens fallida..');
             }
         } else {
-            alert("No existe proveedor de web3.. recomendamos Metamask..");
+            alert('No existe proveedor de web3.. recomendamos Metamask..');
         }
     }
 
     return(
         <div>
-            <Card style={{ background: "rgba(160, 209, 242, 0.8)"}}>
+            <Card style={{ background: 'rgba(160, 209, 242, 0.8)'}}>
                 <Card.Body>
-                    <div className="d.grid gap-2">
-                        <Button onClick={tokensUsuario} variant="info" size="lg">VER MIS TOKENS</Button>
+                    <div className='d.grid gap-2'>
+                        <Button onClick={tokensUsuario} variant='info' size='lg'>VER MIS TOKENS</Button>
                         {vistaTokens ? <Message tokens={tokensUser}/> : null}
                     </div>
                 </Card.Body>

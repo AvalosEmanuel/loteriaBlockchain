@@ -19,19 +19,19 @@ const BtnGeneraGanador = (props) => {
                 } 
                 const transaction = await contract.generarGanador();
                 await transaction.wait();
-                alert("Sorteo realizado con éxito..")
+                alert('Sorteo realizado con éxito..')
             } catch (error) {
-                console.log("Error: ", error);
-                alert("Sorteo fallido..");
+                console.log('Error: ', error);
+                alert('Sorteo fallido..');
             }
         } else {
-            alert("No existe proveedor de web3.. recomendamos Metamask..");
+            alert('No existe proveedor de web3.. recomendamos Metamask..');
         }
     }
 
     return (
         <div className='btnGeneraGanador'>
-            <Button variant="outline-light" onClick={generarGanador}>
+            <Button variant='outline-light' onClick={generarGanador}>
                 REALIZAR SORTEO
             </Button>
         </div>

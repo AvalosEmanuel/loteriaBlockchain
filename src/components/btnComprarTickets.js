@@ -19,25 +19,25 @@ const BtnComprarTickets = (props) => {
             try {
                 const transaction = await contract.comprarTicket(cantTickets);
                 await transaction.wait();
-                alert("Tickets comprados..")
+                alert('Tickets comprados..')
             } catch (error) {
-                alert("Compra de tickets fallida..");
+                alert('Compra de tickets fallida..');
             }
         } else {
-            alert("No existe proveedor de web3.. recomendamos Metamask..");
+            alert('No existe proveedor de web3.. recomendamos Metamask..');
         }
     }
 
     return(
         <div>
-            <Card style={{background: "rgba(238, 243, 93, 0.8)"}}> 
+            <Card style={{background: 'rgba(238, 243, 93, 0.8)'}}> 
             <Card.Body>
-                <div className="d-grid gap-2">
-                    <Button onClick={ejecutarCompra} variant="warning" size="lg">
+                <div className='d-grid gap-2'>
+                    <Button onClick={ejecutarCompra} variant='warning' size='lg'>
                         COMPRAR TICKETS
                     </Button><br />
-                    <input  className="inputCompraTickets" 
-                            onChange={e => setCantidadTickets(e.target.value)} placeholder="Ingrese cantidad.." />      
+                    <input  className='inputCompraTickets'
+                            onChange={e => setCantidadTickets(e.target.value)} placeholder='Ingrese cantidad..' />      
                 </div>
             </Card.Body>
             </Card>

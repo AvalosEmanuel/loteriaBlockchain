@@ -8,11 +8,11 @@ const BtnConectar = () => {
                 await window.ethereum.request({ method: 'eth_requestAccounts' });
     
             } catch (error) {
-            alert("Necesitas un proovedor web3.. Recomendamos Metamask..");
-            console.log("Error: ", error); 
+            alert('Necesitas un proovedor web3.. Recomendamos Metamask..');
+            console.log('Error: ', error); 
             }
         } else {
-          alert("Necesitas un proovedor web3.. Recomendamos Metamask..");
+          alert('Necesitas un proovedor web3.. Recomendamos Metamask..');
         }
     }
 
@@ -20,7 +20,7 @@ const BtnConectar = () => {
         <div>
             <Button className='btnConectar' 
                     onClick={conectar} 
-                    variant="outline-primary" size="lg">CONECTAR WALLET</Button>
+                    variant='outline-primary' size='lg'>CONECTAR WALLET</Button>
         </div>
     
     );

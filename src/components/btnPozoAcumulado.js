@@ -21,20 +21,20 @@ const BtnPozoAcumulado = (props) => {
                 setTokensPozo(cantidadTokens.toString());
                 setVistaTokens(true);
             } catch (error) {
-                console.log("Error: ", error);
-                alert("Solicitud: Ver pozo acumulado fallida..");
+                console.log('Error: ', error);
+                alert('Solicitud: Ver pozo acumulado fallida..');
             }
         } else {
-            alert("No existe proveedor de web3.. recomendamos Metamask..");
+            alert('No existe proveedor de web3.. recomendamos Metamask..');
         }
     }
 
     return(
         <div>
-            <Card style={{ background: "rgba(247, 90, 114, 0.8)"}}>
+            <Card style={{ background: 'rgba(247, 90, 114, 0.8)'}}>
                 <Card.Body>
-                    <div className="d.grid gap-2">
-                        <Button onClick={pozoAcumulado} variant="danger" size="lg"> POZO ACUMULADO</Button>
+                    <div className='d.grid gap-2'>
+                        <Button onClick={pozoAcumulado} variant='danger' size='lg'> POZO ACUMULADO</Button>
                         {vistaTokens ? <Message tokens={tokensPozo}/> : null}
                     </div>
                 </Card.Body>

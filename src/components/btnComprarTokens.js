@@ -21,27 +21,27 @@ const BtnComprarTokens = (props) => {
             try {
                 const transaction = await contract.comprarTokens(cantTokens, {value: ethers.utils.parseEther(cantTokens)});
                 await transaction.wait();
-                alert("Tokens comprados..");
+                alert('Tokens comprados..');
 
             } catch (error) {
-                console.log("Error: ", error);
-                alert("Compra de tokens fallida..");
+                console.log('Error: ', error);
+                alert('Compra de tokens fallida..');
             }
         } else {
-            alert("No existe proveedor de web3.. recomendamos Metamask..");
+            alert('No existe proveedor de web3.. recomendamos Metamask..');
         }
     }
 
     return(
         <div>
-            <Card style={{background: "rgba(160, 209, 242, 0.8)"}}> 
+            <Card style={{background: 'rgba(160, 209, 242, 0.8)'}}> 
             <Card.Body>
-                <div className="d-grid gap-2">
-                    <Button onClick={ejecutarCompra} variant="info" size="lg">
+                <div className='d-grid gap-2'>
+                    <Button onClick={ejecutarCompra} variant='info' size='lg'>
                         COMPRAR TOKENS
                     </Button><br />
-                    <input  className="inputCompraTokens" 
-                            onChange={e => setCantidadTokens(e.target.value)} placeholder="Ingrese cantidad.." 
+                    <input  className='inputCompraTokens'
+                            onChange={e => setCantidadTokens(e.target.value)} placeholder='Ingrese cantidad..' 
                     />      
                 </div>
             </Card.Body>

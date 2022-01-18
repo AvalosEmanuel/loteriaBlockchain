@@ -19,26 +19,26 @@ const BtnDevolverTokens = (props) => {
             try {
                 const transaction = await contract.devolverTokens(cantTokens);
                 await transaction.wait();
-                alert("Tokens devueltos, ya tienes tus Ethers de nuevo..")
+                alert('Tokens devueltos, ya tienes tus Ethers de nuevo..')
             } catch (error) {
                 console.log("Error: ", error);
-                alert("Devolución de tokens fallida..");
+                alert('Devolución de tokens fallida..');
             }
         } else {
-            alert("No existe proveedor de web3.. recomendamos Metamask..");
+            alert('No existe proveedor de web3.. recomendamos Metamask..');
         }
     }
 
     return(
         <div>
-            <Card style={{background: "rgba(52, 75, 156, 0.8)"}}> 
+            <Card style={{background: 'rgba(52, 75, 156, 0.8)'}}> 
             <Card.Body>
-                <div className="d-grid gap-2">
-                    <Button onClick={devolucionDeTokens} variant="dark" size="lg">
+                <div className='d-grid gap-2'>
+                    <Button onClick={devolucionDeTokens} variant='dark' size='lg'>
                         CANJEAR TOKENS
                     </Button><br />
-                    <input  className="inputDevolverTokens" 
-                            onChange={e => setCantidadTokens(e.target.value)} placeholder="Ingrese cantidad.." 
+                    <input  className='inputDevolverTokens' 
+                            onChange={e => setCantidadTokens(e.target.value)} placeholder='Ingrese cantidad..'
                     />      
                 </div>
             </Card.Body>

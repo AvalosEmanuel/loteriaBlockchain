@@ -19,19 +19,19 @@ const BtnGeneraTokens = (props) => {
                 } 
                 const transaction = await contract.generarTokens(1000);
                 await transaction.wait();
-                alert("1000 tokens fueron generados..")
+                alert('1000 tokens fueron generados..')
             } catch (error) {
-                console.log("Error: ", error);
-                alert("Error al intentar generar mas tokens..");
+                console.log('Error: ', error);
+                alert('Error al intentar generar mas tokens..');
             }
         } else {
-            alert("No existe proveedor de web3.. recomendamos Metamask..");
+            alert('No existe proveedor de web3.. recomendamos Metamask..');
         }
     }
 
     return (
         <div className='btnGeneraTokens'>
-            <Button variant="outline-light" onClick={generarTokens}>
+            <Button variant='outline-light' onClick={generarTokens}>
                 GENERAR TOKENS
             </Button>
         </div>

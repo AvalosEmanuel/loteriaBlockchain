@@ -8,14 +8,5 @@ lo cual me resulta muy emocionante desde lo personal..
 
 ###---------------------------------------------------------------------------------------------------------------
 
-ADDRESS_CONTRACT --network ropsten: 0xae9554B37D919Df61397F771e43F9098cEC824eE;
+ADDRESS_CONTRACT --network ropsten: 0x07F0a828bd9050f9e374f5069fFBe77Ed10D72c9;
 
-
- <div>
-        <nav className='nav'>
-          <ul className="navbar-nav px-3"> 
-            <li className="nav-item text-nowrap d-none d-sm-none d-sm-block">
-              <small className="text-white"><span className='span'>Cuenta activa: {artifacts.address}</span></small>
-            </li>
-          </ul>
-        </nav>

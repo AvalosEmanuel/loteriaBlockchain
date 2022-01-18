@@ -5,7 +5,7 @@ import Card from 'react-bootstrap/Card';
 
 
 //Address del contrato implementado en blockchain..
-const CONTRACT_ADDRESS = '0xae9554B37D919Df61397F771e43F9098cEC824eE';
+const CONTRACT_ADDRESS = '0x07F0a828bd9050f9e374f5069fFBe77Ed10D72c9';
 
 
 

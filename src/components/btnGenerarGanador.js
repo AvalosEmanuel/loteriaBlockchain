@@ -2,7 +2,8 @@ import { ethers } from 'ethers';
 import Button from 'react-bootstrap/Button';
 
 //Address del contrato implementado en blockchain..
-const CONTRACT_ADDRESS = '0x07F0a828bd9050f9e374f5069fFBe77Ed10D72c9';
+//const CONTRACT_ADDRESS = '0x5FbDB2315678afecb367f032d93F642f64180aa3';
+
 
 const BtnGeneraGanador = (props) => {
 
@@ -11,7 +12,7 @@ const BtnGeneraGanador = (props) => {
         if(typeof window.ethereum !== 'undefined') {
             const provider = new ethers.providers.Web3Provider(window.ethereum);
             const signer = provider.getSigner();
-            const contract = new ethers.Contract(CONTRACT_ADDRESS, props.contract.abi, signer);
+            const contract = new ethers.Contract(props.address, props.contract.abi, signer);
             try {
                 if(await contract.owner() !== await signer.getAddress()) { 
                     alert('No tienes autorización para ejecutar esta acción..');
@@ -19,7 +20,10 @@ const BtnGeneraGanador = (props) => {
                 } 
                 const transaction = await contract.generarGanador();
                 await transaction.wait();
-                alert('Sorteo realizado con éxito..')
+                const ticketGanador = await contract.ticketGanador();
+                alert('Sorteo realizado con éxito..');
+                alert('El ticket ganador es: ' + ticketGanador.toString());
+                
             } catch (error) {
                 console.log('Error: ', error);
                 alert('Sorteo fallido..');

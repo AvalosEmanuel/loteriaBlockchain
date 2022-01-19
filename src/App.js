@@ -17,14 +17,15 @@ import BtnGeneraGanador from './components/btnGenerarGanador';
 
 import BtnConectar from './components/btnConectar';
 
+const CONTRACT_ADDRESS = '0x5FbDB2315678afecb367f032d93F642f64180aa3';
 
 function App() {
 
   return (  
         <div className='App'>
           <div>
-            <BtnGeneraTokens contract={artifacts} /> 
-            <BtnGeneraGanador contract={artifacts} />
+            <BtnGeneraTokens contract={artifacts} address={CONTRACT_ADDRESS} /> 
+            <BtnGeneraGanador contract={artifacts} address={CONTRACT_ADDRESS}/>
           </div>
           <div>
             <BtnConectar />
@@ -32,21 +33,21 @@ function App() {
           <div className='App2'>
             <Container>
               <Row>
-                <Col><BtnPozoAcumulado contract={artifacts} /></Col>
+                <Col><BtnPozoAcumulado contract={artifacts} address={CONTRACT_ADDRESS} /></Col>
               </Row><br />
               <Row>
-                <Col><BtnTokensDisponibles contract={artifacts} /></Col>
+                <Col><BtnTokensDisponibles contract={artifacts} address={CONTRACT_ADDRESS} /></Col>
               </Row><br />
               <Row>
-                <Col><BtnComprarTokens contract={artifacts} /></Col>
-                <Col><BtnComprarTickets contract={artifacts} /></Col>
+                <Col><BtnComprarTokens contract={artifacts} address={CONTRACT_ADDRESS} /></Col>
+                <Col><BtnComprarTickets contract={artifacts} address={CONTRACT_ADDRESS} /></Col>
               </Row><br />
               <Row>
-                <Col><BtnMisTokens contract={artifacts} /></Col>
-                <Col><BtnMisTickets contract={artifacts} /></Col>
+                <Col><BtnMisTokens contract={artifacts} address={CONTRACT_ADDRESS} /></Col>
+                <Col><BtnMisTickets contract={artifacts} address={CONTRACT_ADDRESS} /></Col>
               </Row><br />
               <Row>
-                <Col><BtnDevolverTokens contract={artifacts} /></Col>
+                <Col><BtnDevolverTokens contract={artifacts} address={CONTRACT_ADDRESS} /></Col>
               </Row>         
             </Container>     
           </div>  

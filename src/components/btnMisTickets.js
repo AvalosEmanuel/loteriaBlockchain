@@ -5,7 +5,8 @@ import Button from 'react-bootstrap/Button'
 import { Alert } from 'react-bootstrap';
 
 //Address del contrato implementado en blockchain..
-const CONTRACT_ADDRESS = '0x07F0a828bd9050f9e374f5069fFBe77Ed10D72c9';
+//const CONTRACT_ADDRESS = '0x5FbDB2315678afecb367f032d93F642f64180aa3';
+
 
 const MessageTickets = ({ tickets }) => {
     return (
@@ -24,7 +25,7 @@ const BtnMisTickets = (props) => {
         if(typeof window.ethereum !== 'undefined') {
             const provider = new ethers.providers.Web3Provider(window.ethereum);
             const signer = provider.getSigner();
-            const contract = new ethers.Contract(CONTRACT_ADDRESS, props.contract.abi, signer);
+            const contract = new ethers.Contract(props.address, props.contract.abi, signer);
             try {
                 const cantidadTokens = await contract.misTickets();
                 setTicketsUser(cantidadTokens.toString());

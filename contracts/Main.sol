@@ -89,6 +89,9 @@ contract Main is Ownable {
 
     //----------------------------- LOGICA DE LA LOTERIA ----------------------------- \\
 
+    //Boleto ganador..
+    uint256 private boletoGanador_;
+
     //Precio del ticket en tokens..
     uint256 public precioTicket = 2;
 
@@ -185,6 +188,9 @@ contract Main is Ownable {
         //2- Selección del número aleatorio, mediante la posición aleatoria del array..
         uint256 eleccionBoleto = ticketsComprados[posicionArray];
 
+        //Asignamos el ticket ganador a la varible boletoGanador..
+        boletoGanador_ = eleccionBoleto;
+        
         //Emisión del evento al haber un ganador..
         emit TicketGanador(eleccionBoleto);
 
@@ -197,6 +203,11 @@ contract Main is Ownable {
             ganadorPremio,
             pozoAcumulado()
         );
+    }
+
+    //Visualizar el número ganador..
+    function ticketGanador() public view returns (uint256) {
+        return boletoGanador_;
     }
 
     //Devolución de los tokens..

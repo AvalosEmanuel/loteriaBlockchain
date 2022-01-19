@@ -5,7 +5,8 @@ import Button from 'react-bootstrap/Button'
 import Message from './Mensaje'
 
 //Address del contrato implementado en blockchain..
-const CONTRACT_ADDRESS = '0x07F0a828bd9050f9e374f5069fFBe77Ed10D72c9';
+//const CONTRACT_ADDRESS = '0x5FbDB2315678afecb367f032d93F642f64180aa3';
+
 
 const BtnPozoAcumulado = (props) => {
     const [tokensPozo, setTokensPozo] = useState();
@@ -15,7 +16,7 @@ const BtnPozoAcumulado = (props) => {
     async function pozoAcumulado() {
         if(typeof window.ethereum !== 'undefined') {
             const provider = new ethers.providers.Web3Provider(window.ethereum);
-            const contract = new ethers.Contract(CONTRACT_ADDRESS, props.contract.abi, provider);
+            const contract = new ethers.Contract(props.address, props.contract.abi, provider);
             try {
                 const cantidadTokens = await contract.pozoAcumulado();
                 setTokensPozo(cantidadTokens.toString());

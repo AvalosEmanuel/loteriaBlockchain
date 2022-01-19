@@ -5,7 +5,7 @@ import Card from 'react-bootstrap/Card';
 
 
 //Address del contrato implementado en blockchain..
-const CONTRACT_ADDRESS = '0x07F0a828bd9050f9e374f5069fFBe77Ed10D72c9';
+//const CONTRACT_ADDRESS = '0x5FbDB2315678afecb367f032d93F642f64180aa3';
 
 const BtnComprarTickets = (props) => {
     const [cantTickets, setCantidadTickets] = useState();
@@ -15,7 +15,7 @@ const BtnComprarTickets = (props) => {
         if(typeof window.ethereum !== 'undefined') {
             const provider = new ethers.providers.Web3Provider(window.ethereum);
             const signer = provider.getSigner();
-            const contract = new ethers.Contract(CONTRACT_ADDRESS, props.contract.abi, signer);
+            const contract = new ethers.Contract(props.address, props.contract.abi, signer);
             try {
                 const transaction = await contract.comprarTicket(cantTickets);
                 await transaction.wait();

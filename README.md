@@ -8,5 +8,5 @@ lo cual me resulta muy emocionante desde lo personal..
 
 ###---------------------------------------------------------------------------------------------------------------
 
-ADDRESS_CONTRACT --network ropsten: 0x07F0a828bd9050f9e374f5069fFBe77Ed10D72c9;
+ADDRESS_CONTRACT --network ropsten: 0xAB6eE85E7C202dA2a92aB7E34582726A1dACd81e;
 

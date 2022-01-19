@@ -1,11 +1,8 @@
 import { useState } from 'react';
 import { ethers } from 'ethers';
-import Card from 'react-bootstrap/Card'
-import Button from 'react-bootstrap/Button'
-import Message from './Mensaje'
-
-//Address del contrato implementado en blockchain..
-//const CONTRACT_ADDRESS = '0x5FbDB2315678afecb367f032d93F642f64180aa3';
+import Card from 'react-bootstrap/Card';
+import Button from 'react-bootstrap/Button';
+import Message from './Mensaje';
 
 
 const BtnTokensDisponibles = (props) => {

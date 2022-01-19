@@ -1,9 +1,6 @@
 import { ethers } from 'ethers';
 import Button from 'react-bootstrap/Button';
 
-//Address del contrato implementado en blockchain..
-//const CONTRACT_ADDRESS = '0x5FbDB2315678afecb367f032d93F642f64180aa3';
-
 
 const BtnGeneraGanador = (props) => {
 

@@ -6,7 +6,7 @@ require("@nomiclabs/hardhat-waffle");
 
   // Configuración para desplegar contrato en red de prueba ropten..
   // Utilizando un nodo Alchemy..
-  /*
+  
   module.exports = {
     solidity: "0.8.0",
     //defaultNetwork: "hardhat",
@@ -23,12 +23,12 @@ require("@nomiclabs/hardhat-waffle");
       }
     },
   };
-*/
+
 
 
 // Configuración para desplegar contrato en LocalHost..
 
-
+/*
   module.exports = {
     solidity: "0.8.0",
     paths: {
@@ -40,6 +40,6 @@ require("@nomiclabs/hardhat-waffle");
       }
     }
   };
-
+*/
 
 // --------------------------------------------------------

@@ -17,7 +17,7 @@ import BtnGeneraGanador from './components/btnGenerarGanador';
 
 import BtnConectar from './components/btnConectar';
 
-const CONTRACT_ADDRESS = '0x5FbDB2315678afecb367f032d93F642f64180aa3';
+const CONTRACT_ADDRESS = '0xB4d1b8D6B4Adc393EDEF8b87d32F7a78EA64724D';
 
 function App() {
 
